@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import './login.css'
 import { postUser } from '../../app/api/login'
 import { useUserContext } from '../UserProvider'
 import { useNavigate } from 'react-router-dom'
+import { LoginStyle } from '../../app/Style';
 
 const Login = () => {
   const [username, setUsername] = useState("")
@@ -20,18 +20,28 @@ const Login = () => {
   }
 
   return (
-    <>
-      <h1>Login</h1>
+    <LoginStyle>
+      <h1>MODERATOR ACCESS</h1>
       <form onSubmit={handleLogin}>
-        <label>Username:</label>
-        <input type="text" name="username" required onChange={e => setUsername(e.target.value)} />
-        <br />
-        <label>Password:</label>
-        <input type="password" name="password" required onChange={e => setPassword(e.target.value)} />
-        <br />
-        <input type="submit" value="Login" />
+        <input
+          autoComplete="off"
+          type="text"
+          id="username"
+          name="username"
+          placeholder="username"
+          onChange={e => setUsername(e.target.value)}
+          required />
+        <input
+          autoComplete="off"
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          onChange={e => setPassword(e.target.value)}
+          required />
+        <button type="submit" value="Login"> LOGIN </button>
       </form>
-    </>
+    </LoginStyle>
   )
 }
 

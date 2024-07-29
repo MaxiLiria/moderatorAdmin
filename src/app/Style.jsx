@@ -7,6 +7,7 @@ html {
 }
 body {
 color: white; 
+background-color: #bac6c7;
     margin: 0; 
 }
 
@@ -91,7 +92,9 @@ animation: neon 2s ease infinite;
 
 export const AsideStyle = styled.div`
 background-color: rgba(105, 106, 109, 0.9);
-
+    position: fixed;
+    left: 0; 
+    height: 100%; 
 
 ul{
     display: flex;
@@ -103,6 +106,7 @@ ul{
     padding-left: 10px;
     border-right: 1px solid;
     margin-top: 20px;
+    height: 100%; 
 }
 
 li {
@@ -132,9 +136,7 @@ export const ChallengeStyle = styled.div`
 export const NavBarStyle = styled.div`
 background-color: rgba(32, 33, 36, 0.9);
 width: 100%; 
-height: 100%; 
 font-family: Roboto;
-position: fixed; 
 nav{
     display: flex;
     align-items: center;
@@ -143,9 +145,13 @@ nav{
     width: 100%;
 }
 .logo{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    position: fixed;
+    top: 15px;
+    left: 40px;
+
 }
 
 .list{
@@ -155,25 +161,31 @@ nav{
     gap: 20px;
 }
 
+li{
+  margin-left: 100px;
+}
 
 `
 export const LogOutBtn = styled.div`
 border: none;
 background-color: rgba(32, 33, 36, 0.9);
 img {
-    
     width: 30px;
     height: 30px;
     cursor: pointer;
-    position: absolute;
-    right: 25px;
-    top: 15px; 
-  }
+    position: fixed;    
+    top: 25px;
+}
     `
 
 export const HomeStyle = styled.div`
 
+
 .body {
     display: flex;
+       position: fixed;
+    left: 450px;
 }
+
+
 `

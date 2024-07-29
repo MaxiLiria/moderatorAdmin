@@ -1,0 +1,29 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: gray;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.list{
+    list-style: none;
+    padding: 0;
+}
+
+.buttonLogout{
+    width: 50px;
+    height: 42px;
+    border: none;
+    background: gray;
+ 
+}
+.logout{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

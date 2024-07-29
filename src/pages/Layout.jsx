@@ -1,19 +1,17 @@
 import { Outlet } from "react-router-dom"
 import NavBar from "../components/navBar/NavBar"
 import Aside from "../components/aside/Aside"
-import { HomeStyle } from '../app/Style'
-
+import './index.css'
 
 const Layout = () => {
   return (
     <>
       <NavBar />
-      <HomeStyle>
         <div className="body">
           <Aside />
           <Outlet />
         </div>
-      </HomeStyle>
+          <div className="footer"></div>
     </>
   )
 }

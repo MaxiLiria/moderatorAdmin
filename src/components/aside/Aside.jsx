@@ -1,22 +1,27 @@
-import logoHome from '../../app/assets/home.png'
+import logoHome from '../../app/assets/icons8-casa-50.png'
 import { Link } from 'react-router-dom'
-import { AsideStyle } from '../../app/Style'
-import logoChallenge from "../../app/assets/challenge.png";
+import logoUsers from "../../app/assets/icons8-usuario-50.png";
+import logoVideo from "../../app/assets/video.png";
+import './aside.css'
 
 const Aside = () => {
   return (
-    <AsideStyle>
+    <div className='aside'>
       <ul>
-        <li>
-          <img src={logoHome} alt="" />
+        <li className="aside-li" >
+          <img className="aside-logo" src={logoHome} alt="" />
           <Link to={"/"}>Home</Link>
         </li>
-        <li>
-          <img src={logoChallenge} alt="" />
-          <Link to={"/challenge/:id"}>Challenge</Link>
+        <li className="aside-li">
+          <img className="aside-logo" src={logoUsers} alt="" />
+          <Link to={"/challenge/:id"}>Users</Link>
+        </li>
+        <li className="aside-li">
+          <img className="aside-logo" src={logoVideo} alt="" />
+          <Link to={"/challenge/:id"}>Videos</Link>
         </li>
       </ul>
-    </AsideStyle>
+    </div>
   )
 }
 

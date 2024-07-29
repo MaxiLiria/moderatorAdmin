@@ -179,12 +179,8 @@ img {
     `
 
 export const HomeStyle = styled.div`
-
-
 .body {
     display: flex;
-       position: fixed;
-    left: 450px;
 }
 
 

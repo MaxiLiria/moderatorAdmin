@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getChallenges } from '../app/api/challenge';
 import DataTable from 'react-data-table-component';
 import { useNavigate } from 'react-router-dom';
-import { HomeStyle } from '../app/Style';
+import './index.css'
 
 
 const Home = () => {
@@ -51,11 +51,10 @@ const Home = () => {
 
 
   return (
-    <HomeStyle>
-      <h3>Challenges</h3>
-      <DataTable columns={columns} data={challenges} />
-    </HomeStyle>
-
+    <div className='challenges'>
+   <h3>Challenges</h3>
+   <DataTable columns={columns} data={challenges} />
+    </div>
   )
 }
 

@@ -1,8 +1,8 @@
 import logo from "../../app/assets/file.enc.jpeg";
-import { LogOutBtn, NavBarStyle } from "../../app/Style";
 import { useUserContext } from '../UserProvider';
 import logOutlogo from "../../app/assets/logout.png";
 import { useNavigate } from "react-router-dom";
+import './navbar.css'
 
 const NavBar = () => {
   const [user, setUser] = useUserContext();
@@ -15,7 +15,6 @@ const NavBar = () => {
   };
 
   return (
-    <NavBarStyle>
       <nav>
         <img className='logo' src={logo} alt="" />
         <ul className='list'>
@@ -23,11 +22,12 @@ const NavBar = () => {
             <h3>ADMIN-MODERATOR</h3>
           </li>
         </ul>
-        <LogOutBtn onClick={logout}>
-          <img src={logOutlogo} alt="LogOut" />
-        </LogOutBtn>
+        <button className="buttonLogout" onClick={logout}>
+          <img className="logout" src={logOutlogo} alt="LogOut" />
+        </button>
+       
       </nav>
-    </NavBarStyle>
+    
   )
 }
 
